@@ -12,7 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _ShoesApp extends State<MyApp> {
-
   int count = 0;
   @override
   Widget build(BuildContext context) {
@@ -30,7 +29,7 @@ class _ShoesApp extends State<MyApp> {
                 ),
               ),
               SizedBox(width: 270),
-              Icon(Icons.shopping_basket_outlined),
+              Icon(Icons.shopping_cart_checkout_outlined),
             ],
           ),
           centerTitle: false,
@@ -45,160 +44,155 @@ class _ShoesApp extends State<MyApp> {
               ),
             ),
             const SizedBox(height: 10),
-           const Row(
-            
+            const Row(
               children: [
                 const SizedBox(
                   width: 2,
                 ),
-                Text(
-                  "Nike Air Force 1'07",
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w600,
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "Nike Air Force 1'07",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 10),
-            Row(
-              
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 5,
-                    horizontal: 15,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  height: 25,
-                  
-                    child: const Text(
-                      "SHOES",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
+            // const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.only(right: 7, left: 7),
+              child: Row(
+                children: [
+                  Container(
+                    width: 100,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          backgroundColor: Colors.deepPurpleAccent),
+                      child: const Text(
+                        "SHOES",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  
-                  
-                ),
-              const  SizedBox(
-                  width: 5,
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 5,
-                    horizontal: 15,
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    borderRadius: BorderRadius.circular(15),
+                  const SizedBox(
+                    width: 5,
                   ),
-                  height: 25,
-                  
-                    child: const Text(
-                      "FOOTWEAR",
-                      style: TextStyle(
-                        color: Colors.white,
+                  Container(
+                    width: 130,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          backgroundColor: Colors.deepPurpleAccent),
+                      child: const Text(
+                        "FOOTWEAR",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
-            const  SizedBox(
-                  height: 5,
+            const SizedBox(
+              height: 5,
             ),
             const Padding(
-              padding: EdgeInsets.all(5),
+              padding: EdgeInsets.only(top: 4, right: 7, left: 7),
               child: Text(
                 "These running shoes offer lightweight, breathable mesh for optimal ventilation, a cushioned sole for enhanced comfort, and a durable rubber outsole for long-lasting wear.",
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                 ),
               ),
             ),
-            
-           Row(
-            
-             children: [
-              const SizedBox(
-                width:2,
-               ) ,
-                 const Text (
-                "Quantity",
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                ),
-               ),
-               const SizedBox(
-                width: 10,
-               ),
-               IconButton(onPressed: (){
-                  if (count > 0){
-                    count--;
-                    setState(() { });
-                  }
-               },
-                    icon: const Icon(Icons.remove)),
-                   
-               const SizedBox(
-                width:2,
-               ) ,
-               Container(
-                height: 25,
-                width: 25,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                ),
-                child: SizedBox(
-                  child: Text("$count",
-                  style: const TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 2,
                   ),
+                  const Text(
+                    "Quantity",
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-               ),
-               const SizedBox(
-                width:2,
-               ) ,
-               IconButton(onPressed: (){
-                
-                    count++;
-                    setState(() { });
-                  
-               },
-                    icon: const Icon(Icons.add)),
-                   
-             ],
-           ),
-            const  SizedBox(
-                  height: 2,
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  IconButton(
+                      onPressed: () {
+                        if (count > 0) {
+                          count--;
+                          setState(() {});
+                        }
+                      },
+                      icon: const Icon(Icons.remove)),
+                  const SizedBox(
+                    width: 2,
+                  ),
+                  Container(
+                    height: 25,
+                    width: 25,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                    ),
+                    child: SizedBox(
+                      child: Text(
+                        "$count",
+                        style: const TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 2,
+                  ),
+                  IconButton(
+                      onPressed: () {
+                        count++;
+                        setState(() {});
+                      },
+                      icon: const Icon(Icons.add)),
+                ],
+              ),
             ),
-           Container(
-            width: 300,
-             child: ElevatedButton(onPressed: (){},
-             style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(vertical :10),
-              backgroundColor: Colors.deepPurpleAccent
-             ),
-              child: const Text(
-                "PURCHASE",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
+            //const  SizedBox( height: 2,  ),
+            Container(
+              width: 300,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    backgroundColor: Colors.deepPurpleAccent),
+                child: const Text(
+                  "PURCHASE",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
                 ),
-              ),),
-           )
+              ),
+            )
           ],
         ),
       ),

@@ -37,7 +37,7 @@ class _MainAppState extends State<MainApp> {
             ),
           ),
           centerTitle: true,
-          backgroundColor:const Color.fromRGBO(225, 225, 249, 1),
+          backgroundColor:const Color.fromARGB(255, 240, 240, 252),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -48,7 +48,7 @@ class _MainAppState extends State<MainApp> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: const Color.fromRGBO(225, 225, 249, 1),
+                    color: const Color.fromARGB(255, 240, 240, 252),
                   ),
                   height: 150,
                   width: 400,
@@ -156,7 +156,7 @@ class _MainAppState extends State<MainApp> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: const Color.fromRGBO(225, 225, 249, 1),
+                    color: const Color.fromARGB(255, 240, 240, 252),
                   ),
                   height: 150,
                   width: 400,
